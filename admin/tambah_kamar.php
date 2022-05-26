@@ -5,6 +5,7 @@ $tipe_kamar = $_POST['tipe_kamar'];
 $fasilitas = $_POST['fasilitas'];
 $harga = $_POST['harga'];
 $foto = $_FILES['foto']['name'];
+$stock = $_POST['stock'];
 
 if ($foto !="") {
   $ekstensi_diperbolehkan = array('png', 'jpg', 'jpeg');
@@ -15,7 +16,7 @@ if ($foto !="") {
   $nama_gambar_baru = $angka_acak.'-'.$foto;
   if (in_array($extensi, $ekstensi_diperbolehkan) === true) {
     move_uploaded_file($file_tmp, 'gambar/'.$nama_gambar_baru);
-    $query = "INSERT INTO kamar (tipe_kamar, fasilitas, harga, foto) VALUES ('$tipe_kamar', '$fasilitas', '$harga', '$nama_gambar_baru')";
+    $query = "INSERT INTO kamar (tipe_kamar, fasilitas, harga, stock, foto) VALUES ('$tipe_kamar', '$fasilitas', '$harga', '$stock', '$nama_gambar_baru')";
     $result = mysqli_query($koneksi, $query);
     
     if (!$result) {
@@ -29,7 +30,7 @@ if ($foto !="") {
   }
     
 } else {
-  $query = "INSERT INTO kamar (tipe_kamar, fasilitas, harga, foto) VALUES ('$tipe_kamar', '$fasilitas', '$harga' null)";
+  $query = "INSERT INTO kamar (tipe_kamar, fasilitas, harga, stock, foto) VALUES ('$tipe_kamar', '$fasilitas', '$harga', '$stock' null)";
   $result = mysqli_query($koneksi, $query);
 
   if (!$result) {

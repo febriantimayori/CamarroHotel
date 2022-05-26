@@ -180,6 +180,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <input type="text" name="harga" class="form-control" placeholder="Harga">
             </div>
             <div class="form-group">
+              <label>Stok Kamar Kamar</label>
+              <input type="text" name="stock" class="form-control" placeholder="Stok Kamar">
+            </div> 
+            <div class="form-group">
               <label>Foto Kamar</label>
               <input type="file" name="foto" class="form-control">
             </div> 

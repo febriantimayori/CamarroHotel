@@ -50,10 +50,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <li class="nav-item">
             <a href="users.php" class="nav-link">Users</a>
           </li>
-          <li class="nav-item">
-            <a href="logout.php" class="nav-link">Logout</a>
-          </li>
         </ul>
+        <div class="navbar-nav ml-auto">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="logout.php" class="nav-link" onclick="return confirm('Yakin ingin Logout?')">Logout</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>

@@ -1,9 +1,9 @@
 CAMARRO HOTEL | UKOM 12
 
-Login Admin
-User : admin
+Login Admin ->
+User : admin,
 Pass : admin
 
-Login Resepsionis
-User : resepsionis
+Login Resepsionis ->
+User : resepsionis,
 Pass : resepsionis
